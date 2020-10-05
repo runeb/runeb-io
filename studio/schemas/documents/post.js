@@ -7,7 +7,7 @@ export default {
   title: 'Post',
   fields: [
     {
-      title: 'title',
+      title: 'Title',
       name: 'title',
       type: 'string',
     },
@@ -24,13 +24,15 @@ export default {
     {
       name: 'mainImage',
       type: 'image',
-      title: 'Main image',
+      title: 'Image',
+      options: {
+        hotspot: true
+      }
     },
     {
       title: 'Body',
       name: 'body',
-      type: 'array',
-      of: [{ type: 'block' }],
+      type: 'bodyText'
     },
   ],
 };

@@ -1,10 +1,11 @@
-import Book from 'react-icons/lib/md/book';
+import React from 'react';
+import Icon from '../../components/Icon';
 
 export default {
   name: 'post',
   type: 'document',
-  icon: Book,
-  title: 'Post',
+  icon: () => <Icon emoji="👨‍💻" />,
+  title: 'Writings',
   fields: [
     {
       title: 'Title',
@@ -19,20 +20,20 @@ export default {
         source: 'title',
         maxLength: 90,
       },
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'mainImage',
       type: 'image',
       title: 'Image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
       title: 'Body',
       name: 'body',
-      type: 'bodyText'
+      type: 'bodyText',
     },
   ],
 };

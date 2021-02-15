@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "lerna": "^3.13.1",
+    "vercel": "^21.2.3"
   },
   "dependencies": {},
   "repository": {

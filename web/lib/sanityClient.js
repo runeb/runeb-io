@@ -1,0 +1,10 @@
+const client = require("@sanity/client");
+
+module.exports = {
+  sanityClient: client({
+    projectId: process.env.SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET,
+    token: process.env.SANITY_TOKEN,
+    useCdn: false
+  }),
+};

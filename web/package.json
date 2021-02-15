@@ -11,7 +11,10 @@
   "author": "Rune Botten",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "@sanity/client": "^2.2.6",
+    "@sanity/image-url": "^0.140.22",
+    "dotenv": "^8.2.0"
   },
   "repository": {
     "type": "git",

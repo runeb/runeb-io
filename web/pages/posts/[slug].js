@@ -19,19 +19,19 @@ const postQuery = groq`
 `
 
 export default function Post({data, preview}) {
+  if (!data) return null
   const router = useRouter()
   if (!router.isFallback && !data.post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   
-  const result = usePreviewSubscription(postQuery, {
+  const {data: post} = usePreviewSubscription(postQuery, {
     params: {slug: data.post.slug},
     initialData: data,
     enabled: preview,
   })
 
-  const {data: subscriptionData}  = result
-  const {title, mainImage, body} = subscriptionData.post
+  const {title, mainImage, body} = post.post
 
   return (
     <article>
@@ -41,6 +41,7 @@ export default function Post({data, preview}) {
       </figure>
       <PortableText blocks={body} />
       <aside>
+
       </aside>
     </article>
   )
@@ -50,7 +51,7 @@ export async function getStaticProps({params, preview = false}) {
   const post = await getClient(preview).fetch(postQuery, {
     slug: params.slug,
   })
-
+  
   return {
     props: {
       preview,
@@ -63,7 +64,7 @@ export async function getStaticPaths() {
   const paths = await getClient().fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
-
+  
   return {
     paths: paths.map((slug) => ({params: {slug}})),
     fallback: true,

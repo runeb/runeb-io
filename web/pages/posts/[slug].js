@@ -2,6 +2,7 @@ import Head from "next/head"
 import ErrorPage from 'next/error'
 import {useRouter} from 'next/router'
 import {groq} from 'next-sanity'
+import {parseISO, format} from "date-fns"
 import {
   getClient,
   usePreviewSubscription,
@@ -9,11 +10,14 @@ import {
   PortableText
   } from '../../lib/sanity'
 
+import styles from "./Post.module.css"
+
 const postQuery = groq`
   *[_type == "post" && slug.current == $slug][0] {
     _id,
     title,
     body,
+    teaser,
     mainImage,
     "slug": slug.current
   }
@@ -32,7 +36,7 @@ export default function Post({data, preview}) {
     enabled: preview,
   })
 
-  const {title, mainImage, body} = post.post
+  const {title, mainImage, body, teaser, publishedAt = new Date()} = post.post
 
   return (
   <>
@@ -40,11 +44,10 @@ export default function Post({data, preview}) {
       <title>{title}</title>
       <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"/>
     </Head>
-    <article>
+    <article className={styles.Article}>
       <h2>{title}</h2>
-      <figure>
-        <img src={urlFor(mainImage).url()} />
-      </figure>
+      <small>{format(publishedAt, "MMMM dd yyyy")}</small>
+      <PortableText blocks={teaser} />
       <PortableText blocks={body} />
       <aside>
 

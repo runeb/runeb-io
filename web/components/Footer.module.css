@@ -7,5 +7,9 @@
 .ul > li {
   display: inline;
   padding-right: 1rem;
+  color: white;
 }
 
+.ul > li > a {
+  color:white;
+}

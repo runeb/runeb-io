@@ -1,14 +1,25 @@
-import Link from 'next/link'
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
     <header>
-      <ul className={styles.ul}>
-        <li><Link href="/">runeb.io</Link></li>
-        <li><Link href="/posts">Writing</Link></li>
-        <li>Audio</li>
-      </ul>
+      <nav>
+        <ul className={styles.ul}>
+          <li>
+            <Link href="/">runeb.io</Link>
+          </li>
+          <li>
+            <Link href="/posts">Writing</Link>
+          </li>
+          <li>
+            <Link href="/recipes">Food</Link>
+          </li>
+          <li>
+            <Link href="/audiograms">Field recordings</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };

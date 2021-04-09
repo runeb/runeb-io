@@ -1,5 +1,5 @@
-import React from "react"
-import Code from "../components/Code"
+import React from "react";
+import Code from "../components/Code";
 
 import {
   groq,
@@ -44,7 +44,18 @@ export const PortableText = createPortableTextComponent({
   // (https://github.com/sanity-io/block-content-to-react)
   serializers: {
     types: {
-      code: (props) => <Code language={props.node.language} code={props.node.code} />
+      code: (props) => (
+        <Code language={props.node.language} code={props.node.code} />
+      ),
+      mainImage: ({ node }) => (
+        <>
+          <img
+            alt={node.alt}
+            src={urlFor(node.asset).width(950).fit("max").auto("format")}
+          />
+          {node.caption && <figcaption>{node.caption}</figcaption>}
+        </>
+      ),
     },
   },
 });

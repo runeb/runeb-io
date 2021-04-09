@@ -1,0 +1,18 @@
+.Steps > ol {
+  list-style-type: none;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  margin: 0;
+  padding: 0;
+}
+
+.Steps > ol > li {
+  counter-increment: steps-counter;
+  font-weight: bold;
+  font-size: larger;
+  display: inline;
+}
+
+.Steps > ol li::before {
+  content: counter(steps-counter) ". ";
+}

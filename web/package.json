@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "date-fns": "^2.20.0",
     "next": "^10.0.0",
     "prismjs": "^1.23.0",
     "react": "17.0.1",

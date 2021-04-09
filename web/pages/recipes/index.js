@@ -9,34 +9,34 @@ import {
   PortableText,
 } from "../../lib/sanity";
 
-import styles from "./index.module.css";
+//import styles from "./index.module.css";
 
-export default function Posts({ data, preview }) {
+export default function Recipes({ data, preview }) {
   const { posts } = data;
   return (
     <>
-      <h1>Writing</h1>
+      <h1>Foods</h1>
       {posts.map((post) => (
-        <article key={post._id} className={styles.Article}>
+        <article key={post._id}>
           <h2>
-            <Link href={`/posts/${encodeURIComponent(post.slug)}`}>
+            <Link href={`/recipes/${encodeURIComponent(post.slug)}`}>
               {post.title}
             </Link>
           </h2>
-          <small>{formatDateTime(post.publishedAt)}</small>
-          <PortableText blocks={post.teaser || []} />
+        <small>{post.source}</small>
+          <PortableText blocks={post.intro || []} />
         </article>
       ))}
     </>
   );
 }
 
-const query = groq`*[_type == "post" && defined(slug.current) && publishedAt < now()] {
+const query = groq`*[_type == "recipe" && defined(slug.current)] {
   _id,
   "slug": slug.current,
+  source,
   title,
-  teaser,
-  publishedAt
+  intro
 }`;
 
 export async function getStaticProps({ params, preview = false }) {

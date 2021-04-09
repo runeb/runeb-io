@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Prism from "prismjs";
 import styles from "./Code.module.css";
+import "prismjs/components/prism-typescript"
 
 const Code = ({ code, plugins, language }) => {
   const codeRef = useRef();
@@ -10,8 +11,6 @@ const Code = ({ code, plugins, language }) => {
       Prism.highlightElement(codeRef.current);
     }
   }, [codeRef]);
-  
-  require(`prismjs/components/prism-${language}`)
 
   return (
     <div className={styles.Code}>

@@ -1,3 +1,4 @@
+import Head from "next/head"
 import ErrorPage from 'next/error'
 import {useRouter} from 'next/router'
 import {groq} from 'next-sanity'
@@ -34,6 +35,10 @@ export default function Post({data, preview}) {
   const {title, mainImage, body} = post.post
 
   return (
+  <>
+    <Head>
+      <title>{title}</title>
+    </Head>
     <article>
       <h2>{title}</h2>
       <figure>
@@ -44,6 +49,7 @@ export default function Post({data, preview}) {
 
       </aside>
     </article>
+    </>
   )
 }
 

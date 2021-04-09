@@ -8,6 +8,10 @@ export default {
   icon: () => <Icon emoji="🎤" />,
   fields: [
     {
+      type: "post",
+      name: "book"
+    },
+    {
       title: 'Title',
       name: 'title',
       type: 'string',

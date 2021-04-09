@@ -1,0 +1,197 @@
+[
+  {
+    "_createdAt": "2021-04-08T20:22:22Z",
+    "_id": "drafts.a6ad57a7-903a-4eff-a219-74feb39f1d85",
+    "_rev": "jzmfs5-rt1-d42-pxz-xz4q7aqt9",
+    "_type": "post",
+    "_updatedAt": "2021-04-09T00:04:16Z",
+    "body": [
+      {
+        "_key": "059560dd4867",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b010185120b8",
+            "_type": "span",
+            "marks": [
+              "underline"
+            ],
+            "text": "Hello there. "
+          },
+          {
+            "_key": "804e20cbe1c2",
+            "_type": "span",
+            "marks": [
+              "strong",
+              "underline"
+            ],
+            "text": "Nice"
+          },
+          {
+            "_key": "0324513a9559",
+            "_type": "span",
+            "marks": [
+              "underline"
+            ],
+            "text": " to see you"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "35e3f087cf68",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "20d696866187",
+            "_type": "span",
+            "marks": [],
+            "text": "Its listening to updates from Sanity - then writing new data files to trigger 11ty to rebuild the site."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "bc9d4ef7199a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "50039e8f3264",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "66a8a7850a6b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "384f32b04315",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "ba5a556115ef",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ea781adec11b",
+            "_type": "span",
+            "marks": [],
+            "text": "Some code to illustrate my point"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "e1b07bc96244",
+        "_type": "code",
+        "code": "const result = () => {\n  return \"cool\"\n}\n",
+        "language": "typescript"
+      }
+    ],
+    "slug": {
+      "_type": "slug",
+      "current": "my-first-11ty-post"
+    },
+    "teaser": [
+      {
+        "_key": "cb9a6288ea3f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9bbca82120a9",
+            "_type": "span",
+            "marks": [],
+            "text": "This is the first teaser I ever wrote on my "
+          },
+          {
+            "_key": "8bf101bf4047",
+            "_type": "span",
+            "marks": [
+              "strong",
+              "em"
+            ],
+            "text": "11ty"
+          },
+          {
+            "_key": "52a52042766a",
+            "_type": "span",
+            "marks": [],
+            "text": " powered static website"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "title": "This is 11ty - running in dev mode"
+  },
+  {
+    "_createdAt": "2020-09-25T08:48:50Z",
+    "_id": "drafts.77f6eb70-6295-4309-8bde-91756e758259",
+    "_rev": "anbfbd-om2-rse-pgw-00xcfl9o7",
+    "_type": "post",
+    "_updatedAt": "2021-04-08T23:26:45Z",
+    "body": [
+      {
+        "_key": "8a8beb37eb07",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8a8beb37eb070",
+            "_type": "span",
+            "marks": [],
+            "text": "Life is like a for-loop. Every passing moment you are alive is another iteration. The only variable that is unknown is "
+          },
+          {
+            "_key": "d373af4ebc3c",
+            "_type": "span",
+            "marks": [
+              "code"
+            ],
+            "text": "x"
+          },
+          {
+            "_key": "49b078b28d58",
+            "_type": "span",
+            "marks": [],
+            "text": ", which represents the maximum number of iterations . It is true that a memory corruption or other rare event might null it out, but in general, it is a relatively stable variable and you have several utils in the standard library and excellent open-source projects you can depend on to avoid decrementing it. You can even increment it if you have clean code and good practices. I've heard that happiness functions are especially good at the latter."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "966f8a49cfc4",
+        "_type": "code",
+        "code": "for (let moment = 0; moment <= x; moment++) {\n  // Try to do things that might increment x\n  // Avoid things that might decrement x\n  // Don't even think about break\n}",
+        "language": "javascript"
+      }
+    ],
+    "mainImage": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-c763c5a3626195b43286ec16ce4f22b5df566194-5688x3713-jpg",
+        "_type": "reference"
+      }
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "the-only-variable-you-control"
+    },
+    "title": "WIP"
+  }
+]

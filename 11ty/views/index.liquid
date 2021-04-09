@@ -7,6 +7,15 @@
   </head>
 
   <body>
+    {% for post in posts %}
+      <div>
+        <h1>{{post.title}}</h1>
+        <p>
+          {% portableText post.teaser %}
+        </p>
+        <a href="/posts/{{post.slug.current}}">Read more</a>
+      </div>
+    {% endfor %}
     <h1>runeb.io</h1>
     <p>
       I'm a developer working as solution architect at

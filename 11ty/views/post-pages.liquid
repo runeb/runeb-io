@@ -1,0 +1,32 @@
+---
+pagination:
+    data: posts
+    size: 1
+    alias: post
+permalink: "posts/{{ post.slug.current }}/"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <title>{{post.title}}</title>
+</head>
+    <body>
+        <main role="main">
+            <article>
+                <a href="/">Home</a>
+                <h1>{{post.title}}</h1>
+                <small>{% formatDate post._createdAt%}</small>
+                {%sanityImg post.mainImage 900 %}
+                {% portableText post.teaser %}
+                <p>
+                    {% portableText post.body %}
+                </p>
+            </article>
+        </main>
+    </body>
+</html>
+

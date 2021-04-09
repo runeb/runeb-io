@@ -23,6 +23,11 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Teaser',
+      name: 'teaser',
+      type: 'bodyText',
+    },
+    {
       name: 'mainImage',
       type: 'image',
       title: 'Image',

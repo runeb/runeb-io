@@ -8,9 +8,14 @@ export default {
   icon: () => <Icon emoji="🥕" />,
   fields: [
     {
-      title: 'Name',
-      name: 'name',
+      title: 'Title',
+      name: 'title',
       type: 'string',
+    },
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
     },
     {
       title: 'Image',

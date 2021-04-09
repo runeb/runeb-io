@@ -8,14 +8,41 @@ export default {
   icon: () => <Icon emoji="👨‍🍳" />,
   fields: [
     {
-      title: 'Name',
-      name: 'name',
+      title: 'Title',
+      name: 'title',
       type: 'string',
+    },
+    {
+      type: "slug",
+      name: "slug",
+      options: {
+        source: "title"
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      type: "string",
+      name: "source"
     },
     {
       title: 'Image',
       name: 'image',
-      type: 'mainImage',
+      type: 'image',
     },
+    {
+      type: "array",
+      name: "intro",
+      of: [{type: "block"}]
+    },
+    {
+      type: "array",
+      name: "ingredients",
+      of: [{type: "ingredientUsage"}]
+    },
+    {
+      type: "array",
+      name: "steps",
+      of: [{type: "recipeStep"}]
+    }
   ],
 };

@@ -8,6 +8,9 @@ export default {
     },
     {
       type: 'code'
+    },
+    {
+      type: "mainImage"
     }
   ]
 }

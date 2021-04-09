@@ -23,17 +23,13 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      type: "datetime",
+      name: "publishedAt"
+    },
+    {
       title: 'Teaser',
       name: 'teaser',
       type: 'bodyText',
-    },
-    {
-      name: 'mainImage',
-      type: 'image',
-      title: 'Image',
-      options: {
-        hotspot: true,
-      },
     },
     {
       title: 'Body',

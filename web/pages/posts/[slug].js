@@ -38,6 +38,7 @@ export default function Post({data, preview}) {
   <>
     <Head>
       <title>{title}</title>
+      <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"/>
     </Head>
     <article>
       <h2>{title}</h2>

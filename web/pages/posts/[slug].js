@@ -47,7 +47,7 @@ export default function Post({data, preview}) {
 }
 
 export async function getStaticProps({params, preview = false}) {
-  const post = await getClient(true).fetch(postQuery, {
+  const post = await getClient(preview).fetch(postQuery, {
     slug: params.slug,
   })
 
